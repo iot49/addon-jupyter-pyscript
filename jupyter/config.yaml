@@ -4,6 +4,8 @@ version: "0.0.2"
 slug: jupyterlabpyscript
 description: JupyterLab with Pyscript Kernel
 url: https://github.com/iot49/addon-jupyter-pyscript
+ingress: true
+panel_icon: mdi:flask-outline
 init: false
 arch:
   - aarch64

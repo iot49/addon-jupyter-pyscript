@@ -1,10 +1,11 @@
 #!/command/with-contenv bashio
-# shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Example
-# Runs example1 script
+# Home Assistant Community Add-on: JupyterLab
+# Runs the Nginx daemon
 # ==============================================================================
 
-bashio::log.info "Starting Example1..."
+# Wait for JupyterLab to become available
+bashio::net.wait_for 28459
 
-exec /usr/bin/example1.sh
+bashio::log.info "Starting NGinx..."
+exec nginx
