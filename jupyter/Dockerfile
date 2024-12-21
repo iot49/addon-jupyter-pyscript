@@ -19,14 +19,17 @@ RUN \
     MAKEFLAGS="-j$(nproc)" \
     && export MAKEFLAGS 
 
-RUN    apt-get update \
-    && apt-get install -y --no-install-recommends \
-        build-essential=12.9 \
+RUN apt-get update
+
+RUN apt-get install -y --no-install-recommends \
+        build-essential=12.9 
+RUN apt-get install -y --no-install-recommends \
         dirmngr=2.2.40-1.1 \
         git=1:2.39.5-0+deb12u1 \
         gpg-agent=2.2.40-1.1 \
         gpg=2.2.40-1.1 \
-        libffi-dev=3.4.4-1 \
+        libffi-dev=3.4.4-1 
+RUN apt-get install -y --no-install-recommends \
         libffi8=3.4.4-1 \
         libfreetype6-dev=2.12.1+dfsg-5+deb12u3 \
         libfreetype6=2.12.1+dfsg-5+deb12u3 \
@@ -46,7 +49,8 @@ RUN    apt-get update \
         libxslt1-dev=1.1.35-1 \
         libxslt1.1=1.1.35-1 \
         libzmq3-dev=4.3.4-6 \
-        libzmq5=4.3.4-6 \
+        libzmq5=4.3.4-6 
+RUN apt-get install -y --no-install-recommends \
         nginx=1.22.1-9 \
         pandoc=2.17.1.1-2~deb12u1 \
         pkg-config=1.8.1-1 \
