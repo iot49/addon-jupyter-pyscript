@@ -1,6 +1,6 @@
 ---
 name: JupyterLabPyscript
-version: "0.0.2"
+version: "0.0.3"
 slug: jupyterlabpyscript
 description: JupyterLab with Pyscript Kernel
 url: https://github.com/iot49/addon-jupyter-pyscript
