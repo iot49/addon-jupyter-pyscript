@@ -17,8 +17,9 @@ ARG BUILD_ARCH
 # hadolint ignore=DL3018,DL3008
 RUN \
     MAKEFLAGS="-j$(nproc)" \
-    && export MAKEFLAGS \
-    \
+    && export MAKEFLAGS 
+
+RUN \
     && apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
@@ -53,8 +54,9 @@ RUN \
         python3-dev=3.11.2-1+b1 \
         python3-distutils=3.11.2-3 \
         python3-minimal=3.11.2-1+b1 \
-        zlib1g-dev=1:1.2.13.dfsg-1 \
-    \
+        zlib1g-dev=1:1.2.13.dfsg-1
+
+RUN \
     && mkdir -p /etc/apt/keyrings \
     && curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key \
         | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg \
