@@ -19,8 +19,7 @@ RUN \
     MAKEFLAGS="-j$(nproc)" \
     && export MAKEFLAGS 
 
-RUN \
-    && apt-get update \
+RUN    apt-get update \
     && apt-get install -y --no-install-recommends \
         build-essential=12.9 \
         dirmngr=2.2.40-1.1 \
